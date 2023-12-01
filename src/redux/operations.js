@@ -4,7 +4,7 @@ import iziToast from "izitoast";
 import "/node_modules/izitoast/dist/css/iziToast.css";
 
 export const instance = axios.create({
-    baseURL: "https://https://656881d09927836bd974f3ee.mockapi.io/car-renral-app",
+    baseURL: "https://656881d09927836bd974f3ee.mockapi.io/car-renral-app",
 });
 
 export const fetchCars = createAsyncThunk(

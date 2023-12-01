@@ -1,4 +1,5 @@
 import React from "react";
+import sprite from "../../assets/sprite.svg";
 
 const CarListItem = ({
   idCar,
@@ -21,6 +22,9 @@ const CarListItem = ({
   return (
     <li>
       <img src={image} alt={model} />
+      <svg>
+        <use href={`${sprite}#icon-heart-normal`} />
+      </svg>
       <p>{make}</p>
       <p>{model},</p>
       <p>{year}</p>
