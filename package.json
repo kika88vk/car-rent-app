@@ -2,6 +2,7 @@
   "name": "car-rent-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kika88vk.github.io/car-rent-app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
