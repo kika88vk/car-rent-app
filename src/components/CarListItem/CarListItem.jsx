@@ -36,14 +36,28 @@ const CarListItem = ({
       </div>
 
       <div className={css.descrText}>
-        <span>{address}</span>
-        <span>{rentalCompany}</span>
-        <span>{type}</span>
-        <span>{idCar}</span>
-        <span>{functionalities}</span>
+        <span className={css.descrSpan}>{address}</span>
+        <svg className={css.iconStick}>
+          <use href={`${sprite}#icon-Vector-4`} />
+        </svg>
+        <span className={css.descrSpan}>{rentalCompany}</span>
+        <svg className={css.iconStick}>
+          <use href={`${sprite}#icon-Vector-4`} />
+        </svg>
+        <span className={css.descrSpan}>{type}</span>
+        <svg className={css.iconStick}>
+          <use href={`${sprite}#icon-Vector-4`} />
+        </svg>
+        <span className={css.descrSpan}>{idCar}</span>
+        <svg className={css.iconStick}>
+          <use href={`${sprite}#icon-Vector-4`} />
+        </svg>
+        <span className={css.descrSpan}>{functionalities}</span>
       </div>
 
-      <button type="button">Learn more</button>
+      <button type="button" className={css.carButton}>
+        Learn more
+      </button>
     </li>
   );
 };
