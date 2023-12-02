@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import sprite from "../../assets/sprite.svg";
 import css from "./CarListItem.module.css";
+import ModalWindow from "../ModalWindow/ModalWindow";
+import CarInfo from "../CarInfo/CarInfo";
 
 const CarListItem = ({
   idCar,
@@ -20,6 +22,12 @@ const CarListItem = ({
   rentalConditions,
   mileage,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const onClickModal = () => {
+    setIsModalOpen((prevState) => !prevState);
+  };
+
   return (
     <li className={css.listItem}>
       <img src={image} alt={model} className={css.carImg} />
@@ -55,9 +63,32 @@ const CarListItem = ({
         <span className={css.descrSpan}>{functionalities}</span>
       </div>
 
-      <button type="button" className={css.carButton}>
+      <button type="button" className={css.carButton} onClick={onClickModal}>
         Learn more
       </button>
+      {isModalOpen && (
+        <ModalWindow onClick={onClickModal}>
+          <CarInfo
+            onClick={onClickModal}
+            idCar={idCar}
+            year={year}
+            make={make}
+            model={model}
+            type={type}
+            image={image}
+            description={description}
+            fuelConsumption={fuelConsumption}
+            engineSize={engineSize}
+            accessories={accessories}
+            functionalities={functionalities}
+            rentalPrice={rentalPrice}
+            rentalCompany={rentalCompany}
+            address={address}
+            rentalConditions={rentalConditions}
+            mileage={mileage}
+          />
+        </ModalWindow>
+      )}
     </li>
   );
 };

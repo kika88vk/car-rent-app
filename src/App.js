@@ -5,7 +5,7 @@ import SharedLayout from './components/SharedLayout/SharedLayout';
 
 
 const HomePage = lazy(() => import('./pages/HomePage'));
-const CatalogPage = lazy(() => import('./pages/CatalogPage'));
+const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage.jsx'));
 const FavoritePage = lazy(() => import('./pages/FavoritePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 

@@ -1,0 +1,67 @@
+.CarInfoContainer {
+  /* background-color: #fff;
+  border-radius: 24px;
+  max-width: 541px;
+  height: 752px; */
+}
+.carImgModal {
+  width: 461px;
+  height: 248px;
+  border-radius: 14px;
+}
+.carName {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #121417;
+  gap: 5px;
+}
+
+.accent {
+  color: #3470ff;
+}
+.descrText {
+  color: rgba(18, 20, 23, 0.5);
+
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.descrSpan {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  display: inline-block;
+  max-width: 35%;
+}
+.iconStick {
+  height: 16px;
+  width: 2px;
+  stroke: rgba(18, 20, 23, 0.5);
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.carModalBtn {
+  margin-top: 31px;
+  margin-right: auto;
+  display: inline-block;
+  width: 168px;
+  height: 44px;
+  padding: 12px 50px;
+  border-radius: 12px;
+  background-color: #3470ff;
+  align-items: center;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 14px;
+  border: 0;
+  font-weight: 600;
+  line-height: 1.42;
+  transition: background-color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.carModalBtn:is(:hover, :focus) {
+  background-color: #0b44cd;
+}
