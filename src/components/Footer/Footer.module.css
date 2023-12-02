@@ -1,0 +1,15 @@
+.footerLine {
+  min-height: 60px;
+  background-color: #0b44cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.footerText {
+  color: #fff;
+}
+.footer {
+  /* position: sticky; */
+  bottom: 0;
+}

@@ -5,20 +5,7 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-left: 23px;
-  padding-right: 23px;
-
-  /* text-align: center; */
-
-  @media screen and (min-width: 768px) {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding-left: 128px;
-    padding-right: 128px;
-  }
+  /* min-height: 100vh; */
 }
 
 code {

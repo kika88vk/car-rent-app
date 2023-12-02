@@ -4,10 +4,10 @@ import { lazy } from 'react';
 import SharedLayout from './components/SharedLayout/SharedLayout';
 
 
-const HomePage = lazy(() => import('./pages/HomePage'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage.jsx'));
-const FavoritePage = lazy(() => import('./pages/FavoritePage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const FavoritePage = lazy(() => import('./pages/FavoritePage/FavoritePage.jsx'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage.jsx'));
 
 function App() {
   return (

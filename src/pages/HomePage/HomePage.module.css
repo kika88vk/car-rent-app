@@ -1,0 +1,34 @@
+.imgHome {
+  width: 250px;
+  border-radius: 14px;
+  margin-left: auto;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    width: 650px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 850px;
+  }
+}
+.title {
+  margin-top: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 42px;
+  }
+}
+.text {
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+  }
+}
