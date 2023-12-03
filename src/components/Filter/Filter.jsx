@@ -1,7 +1,7 @@
 import React from "react";
 import { options } from "../../redux/carsCategoriesConstans";
 import css from "./Filter.module.css";
-import sprite from "./../../assets/sprite.svg";
+// import sprite from "./../../assets/sprite.svg";
 import Select from "react-select";
 import { useDispatch } from "react-redux";
 import { setFilterList } from "../../redux/filterSlice";

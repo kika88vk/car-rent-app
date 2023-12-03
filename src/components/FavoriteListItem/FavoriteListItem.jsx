@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import css from "./FavoriteListItem.module.css";
 import sprite from "../../assets/sprite.svg";
-import css from "./CarListItem.module.css";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import CarInfo from "../CarInfo/CarInfo";
 import { useDispatch } from "react-redux";
-import {
-  setFavoriteCars,
-  deleteFavoriteCar,
-} from "../../redux/favoriteCarsSlice";
-import { selectFavoriteCars } from "../../redux/selectors";
-import { useSelector } from "react-redux";
+import { deleteFavoriteCar } from "../../redux/favoriteCarsSlice";
 
-const CarListItem = ({
+const FavoriteListItem = ({
   idCar,
   year,
   make,
@@ -31,51 +26,19 @@ const CarListItem = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [heartIconToggle, setHeartIconToggle] = useState(
-    `${sprite}#icon-heart-normal`
+    `${sprite}#icon-heart-active`
   );
-  const [isFavorite, setIsFavorite] = useState(false);
-  const favoriteCars = useSelector(selectFavoriteCars);
-
-  useEffect(() => {
-    if (favoriteCars?.some((car) => car.idCar === idCar)) {
-      setIsFavorite(true);
-      setHeartIconToggle(`${sprite}#icon-heart-active`);
-    } else {
-      setIsFavorite(false);
-      setHeartIconToggle(`${sprite}#icon-heart-normal`);
-    }
-  }, [favoriteCars, idCar]);
-
   const dispatch = useDispatch();
 
   const onClickModal = () => {
     setIsModalOpen((prevState) => !prevState);
   };
 
-  const car = {
-    idCar,
-    year,
-    make,
-    model,
-    type,
-    image,
-    description,
-    fuelConsumption,
-    engineSize,
-    accessories,
-    functionalities,
-    rentalPrice,
-    rentalCompany,
-    address,
-    rentalConditions,
-    mileage,
-  };
   const handleAddFavoriteCar = () => {
-    isFavorite
-      ? dispatch(deleteFavoriteCar(idCar))
-      : dispatch(setFavoriteCars(car));
+    setHeartIconToggle(`${sprite}#icon-heart-normal`);
+    console.log("idCar", idCar);
+    dispatch(deleteFavoriteCar(idCar));
   };
-
   return (
     <li className={css.listItem}>
       <img src={image} alt={model} className={css.carImg} />
@@ -141,4 +104,4 @@ const CarListItem = ({
   );
 };
 
-export default CarListItem;
+export default FavoriteListItem;

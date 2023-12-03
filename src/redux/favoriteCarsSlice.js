@@ -14,7 +14,9 @@ const favoriteCarsSlice = createSlice({
             state.favorite.push(action.payload);
         },
         deleteFavoriteCar(state, action) {
-            state.favorite = state.favorite.filter(fav => fav.id !== action.payload.id);
+            // state.favorite = state.favorite.filter(fav => fav.id !== action.payload);
+            const index = state.favorite.findIndex(fav => fav.idCar === action.payload);
+            state.favorite.splice(index, 1);
         },
     }
 });
