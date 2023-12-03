@@ -36,7 +36,7 @@ const FavoriteListItem = ({
 
   const handleAddFavoriteCar = () => {
     setHeartIconToggle(`${sprite}#icon-heart-normal`);
-    console.log("idCar", idCar);
+
     dispatch(deleteFavoriteCar(idCar));
   };
   return (

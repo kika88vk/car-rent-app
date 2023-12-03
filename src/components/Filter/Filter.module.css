@@ -8,26 +8,8 @@
   stroke: #121417;
 }
 .filterContainer {
-  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   width: 224px;
   display: block;
-}
-.filterSelect {
-  min-width: 224px;
-  height: 48px;
-  background-color: #f7f7fb;
-  color: #121417;
-  border-radius: 14px;
-  border: none;
-  padding-left: 18px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.11;
-}
-.filterSelect::-ms-expand {
-  display: none;
 }

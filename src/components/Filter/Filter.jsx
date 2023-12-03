@@ -18,14 +18,6 @@ const Filter = () => {
         placeholder="Enter the text"
         onChange={handleSelectChange}
       />
-      {/* <select className={css.filterSelect} placeholder="Enter the text">
-        <option>red</option>
-        <option>green</option>
-        <option>blue</option>
-      </select>
-      <svg className={css.iconChevron}>
-        <use href={`${sprite}#icon-chevron-down-new`} />
-      </svg> */}
     </div>
   );
 };
