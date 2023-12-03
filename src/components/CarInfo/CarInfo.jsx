@@ -56,12 +56,13 @@ const CarInfo = ({
         </svg>
         <span className={css.descrSpan}>Engine size: {engineSize}</span>
       </div>
-      <p>{description}</p>
+      <p className={css.description}>{description}</p>
+      <p className={css.accessTitle}>Accessories and functionalities:</p>
       <div>
         <span>{accessories}</span>
         <span>{functionalities}</span>
       </div>
-      <p>Rental Conditions:</p>
+      <p className={css.accessTitle}>Rental Conditions:</p>
       <div>
         <p>Minimum age: {rentalConditions}</p>
         <p>Mileage: {mileage}</p>

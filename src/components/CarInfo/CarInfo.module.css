@@ -16,6 +16,7 @@
   line-height: 1.33;
   color: #121417;
   gap: 5px;
+  margin-top: 14px;
 }
 
 .accent {
@@ -23,7 +24,7 @@
 }
 .descrText {
   color: rgba(18, 20, 23, 0.5);
-
+  margin-top: 8px;
   font-size: 12px;
 
   font-weight: 400;
@@ -64,4 +65,20 @@
 }
 .carModalBtn:is(:hover, :focus) {
   background-color: #0b44cd;
+}
+
+.description {
+  color: #121417;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+.accessTitle {
+  color: #121417;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin-bottom: 8px;
 }
