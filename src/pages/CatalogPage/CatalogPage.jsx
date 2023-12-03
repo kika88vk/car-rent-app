@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCars } from "../../redux/selectors";
 import { fetchCars } from "../../redux/operations";
 import css from "./CatalogPage.module.css";
+import Filter from "../../components/Filter/Filter";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const CatalogPage = () => {
 
   return (
     <section>
+      <Filter />
       <div>{cars && <CarList />}</div>
       <button className={css.btnCatalog} type="button">
         Load more

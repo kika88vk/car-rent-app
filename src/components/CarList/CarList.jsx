@@ -1,15 +1,22 @@
 import React from "react";
 import CarListItem from "../CarListItem/CarListItem";
 import { useSelector } from "react-redux";
-import { selectCars } from "../../redux/selectors";
+import { selectCars, selectFilterList } from "../../redux/selectors";
 import css from "./CarList.module.css";
 
 const CarList = () => {
   const cars = useSelector(selectCars);
+  const filterList = useSelector(selectFilterList);
 
+  const getFilteredCars = () => {
+    let filteredCars = cars.filter((car) => car.make.includes(filterList));
+    return filteredCars;
+  };
+
+  const visibleCars = getFilteredCars();
   return (
     <ul className={css.carList}>
-      {cars.map((car) => (
+      {visibleCars.map((car) => (
         <CarListItem
           key={car.id}
           image={car.img}
