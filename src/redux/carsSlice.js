@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCars } from "./operations";
+import { fetchOnePageCars } from "./operations";
 
 const initialState = {
     cars: [],
+    onePageCars: [],
     isLoading: false,
     error: null,
 };
@@ -16,6 +18,11 @@ const carsSlice = createSlice({
             .addCase(fetchCars.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.cars = action.payload;
+                state.error = null;
+            })
+            .addCase(fetchOnePageCars.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.onePageCars = action.payload;
                 state.error = null;
             })
             .addMatcher(
