@@ -28,7 +28,7 @@ export const fetchCars = createAsyncThunk(
 export const fetchOnePageCars = createAsyncThunk('cars/fetchOnePage', async (page, thunkAPI) => {
     try {
         const { data } = await instance.get(`/adverts?page=${page}&limit=${LIMIT}`);
-        console.log('One page cars', data)
+
         return data;
     } catch (error) {
         iziToast.error({
