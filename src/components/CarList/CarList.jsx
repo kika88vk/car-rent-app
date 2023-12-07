@@ -27,7 +27,7 @@ const CarList = () => {
   const visibleCars = getFilteredCars();
   return (
     <ul className={css.carList}>
-      {visibleCars.map((car) => (
+      {visibleCars?.map((car) => (
         <CarListItem
           key={car.id}
           image={car.img}

@@ -22,7 +22,7 @@ const carsSlice = createSlice({
             })
             .addCase(fetchOnePageCars.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.onePageCars = action.payload;
+                state.onePageCars = [...state.onePageCars, ...action.payload];
                 state.error = null;
             })
             .addMatcher(
